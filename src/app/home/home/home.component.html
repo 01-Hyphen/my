@@ -1,0 +1,72 @@
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body> -->
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo" [routerLink]="['home']"><img src="../../../assets/Color logo - no background.png" height="80" width="300" alt=""></div>
+
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+
+      <!-- USING CHECKBOX HACK -->
+      <!-- <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label> -->
+
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+
+        <li><a [routerLink]="['home']">Home</a></li>
+        <!-- <li class="services">
+          <a >Settings</a>
+          <ul class="dropdown">
+            <li><a [routerLink]="['update']">Update</a></li>
+            <li [routerLink]="['Friends']">Friends</li>
+            <li (click)="seeFriends()"> Find Friends</li>
+            <li [routerLink]="['tempFriendList']">Friend Requests</li>
+            <li [routerLink]="['portfolio']">Portfolio</li>
+            <li [routerLink]="['LeaderBoard']"> LeaderBoard</li>
+            
+          </ul>
+        </li>  -->
+           
+        <li><a [routerLink]="['about']" >About</a></li>
+        <li><a [routerLink]="['contact']">Contact</a></li>
+        <div class="con">
+        <li class= "logout" (click)="logout()" style="display: inline-block; padding-left: 2px; padding-right: 10px;">Logout</li>
+        <div class="dropdown1">
+        <div class="userLogo">{{userLogo | titlecase}}</div>
+        <div class="dropdown-content">
+          <p>Hi, {{ user.name|titlecase}}</p>
+        </div>
+        </div>
+      </div>
+        
+
+
+        
+        
+        
+      </div>
+    </ul>
+  </nav>
+<!-- <p style="color: white;">Hiiiiiiiiiiiiiiiiiiiii</p> -->
+
+<div class="router">
+  <router-outlet></router-outlet>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>
+<!-- </body>
+</html> -->
+
+

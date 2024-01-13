@@ -1,0 +1,84 @@
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card  shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            
+            <h3 style="text-align: center;">Registration Form</h3>
+            <form [formGroup]="signupForm" (ngSubmit)="submit()">
+
+              <div class="row">
+                <div class="form-group">
+                  <div class="form-outline">
+                    <label class="form-label" for="name">Name</label>
+                    <input type="text" id="name" class="form-control" formControlName="name"/>
+                  </div>
+                </div>   
+              </div>
+                <div class="form-group">
+                  <div class="form-outline">
+                    <label class="form-label" for="emailAddress">Email</label>
+                    <input type="email" id="emailAddress" class="form-control" formControlName="email" />                   
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-outline">
+                    <label class="form-label" for="password" #password>Password</label>
+                    <input type="password" id="password" class="form-control" formControlName="password" />                   
+                  </div>
+                </div>
+                  <div class="form-group">
+                    <div class="form-outline">
+                      <label class="form-label" for="password2">Confirm Password</label>
+                      <input type="password2" id="password2" class="form-control" formControlName="confirmPassword"/>  
+                      <span *ngIf="passwordNotMatched != ''">{{passwordNotMatched}}</span>                   
+                    </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-outline">
+                    <label class="form-label" for="contactNumber">Contact Number</label>
+                    <input type="tel" id="contactNumber" class="form-control" formControlName="contactNumber"/>
+                  </div>
+                </div>
+            
+
+          
+
+              <div class="mt-4 pt-2">
+                <button class="btn btn-primary" type="submit">Register</button>
+              </div>
+
+            </form>
+            <div style="color:green" *ngIf="successMsg && !errorMessage">
+              {{successMsg}}
+            </div>
+            <div style="color: red;" *ngIf="!successMsg && errorMessage">
+              {{errorMessage}}
+            </div>
+  
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

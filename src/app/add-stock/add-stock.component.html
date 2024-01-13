@@ -1,0 +1,66 @@
+
+
+      <!-- <section class="vh-100">
+        <div class="container py-5 h-100">
+          <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card  shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5"> -->
+                  
+                  <div class="form">
+     
+                    <div class="up-form" [ngClass]="{hidelist:Bool===false}">
+                      <div class="list" [ngClass]="{hidelist:Bool===false}"> 
+                           <label for="">Select Stock</label>
+                           <input type="text" name ="" [(ngModel)]="Stock" [value]="selectedStock" (input)="onChange($event)" id="" placeholder="Search Stock" >
+                               <ul class="example" style="list-style-type: none;" *ngIf="Bool">
+                                <li *ngFor="let st of Stocklist"> 
+                               <div class="option" *ngIf= "st.toLocaleLowerCase().includes(Stock.toLocaleLowerCase()) && Bool"  (click)="onClick(st)">
+                                  {{st}}
+                               </div>
+                               </ul>
+                      </div>
+                    </div>
+                   
+                       <div class="input1">
+                           <label for="">Buying Price</label>
+                           <input [(ngModel)]="buyPrice" type="number" >
+                       </div>
+                    <!-- <div class="desc" > -->
+                       <div  [ngClass]="{increase:Bool===false,input:Bool===true}">
+                           <label for="">Desc</label>
+                               <textarea  [(ngModel)]="description"    name="" id="" cols="30" rows="10" ></textarea>
+                       </div>
+                   <!-- </div> -->
+                   <button class="btn btn-primary" type="button" (click)="addStock()">Add Stock</button>
+                 
+                  <div style="color:green" *ngIf="successMsg && !errorMsg">
+                    {{successMsg}}
+                  </div>
+                  <div style="color: red;" *ngIf="!successMsg && errorMsg">
+                    {{errorMsg}}
+                  </div> 
+               </div>
+       
+               <!-- Loading Spinner -->
+               <div *ngIf="showSpinner" class="con">
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+              </div>
+                            
+              
+               
+             
+                 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  

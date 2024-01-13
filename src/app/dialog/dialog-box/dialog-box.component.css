@@ -1,0 +1,15 @@
+.con{
+    background-color:white;
+    height: 100%;
+    width: 100%;
+    padding: 8%;
+    color: white;
+    border-color: 2px solid white;
+}
+
+/* button{
+    background-color: red;
+    color: white;
+    padding: 2%;
+    border-radius: 5px;
+} */

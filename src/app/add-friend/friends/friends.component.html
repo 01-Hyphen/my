@@ -1,0 +1,32 @@
+
+
+
+<!-- <div class="Container">
+    <ul class="FriendList">
+        <li class="FriendItem" *ngFor="let f of user">
+            <h5 class="FriendName">{{f.loggedInUserName}}</h5>
+        </li>
+    </ul>
+</div> -->
+
+<div class="container">
+    <a  *ngFor="let f of user ; let i =index">
+        <div class="box" >
+            <div class="box-header" >
+            <h5>
+               {{f.loggedInUserName}}
+            </h5>
+   
+            </div >
+            <div class="profile-image" >
+              <!-- <img src="src\assets\profilePhoto.png" alt=""> -->          
+            </div>
+            <div>
+                <button class="btn btn-primary"  (click)="friendId(i)"  [routerLink]="['../','FriendProfile']">View Profile</button>
+                <a ></a> 
+            </div>
+        </div>
+    </a>
+  
+  </div>
+  <router-outlet></router-outlet>

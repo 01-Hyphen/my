@@ -1,0 +1,240 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.view{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+
+    background-color: pink;
+}
+html{
+    font-size: 10px;
+}
+.form{
+    padding: 2rem;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 20rem;
+    position: relative;
+    border-radius: 0.4rem;
+    background-color: #ffffff;
+}
+
+.up-form{
+    display: inline-block;
+    width: 50%;
+}
+
+.list{
+    width: 100%;
+    height: 100px;
+    border: none;
+}
+
+
+label{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.input1{
+    width: 50%;
+    padding-left: 0.5rem;
+    height: 2rem;
+    
+}
+
+
+.input1 input[type=number]{
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+textarea{
+    height: 5rem;
+    width: 90%;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+}
+
+/* ----------------------------------------------------------------- */
+
+.outer{
+    padding: 0.5rem;
+    width: 10rem;
+    height:15rem;
+    text-align: center;
+}
+
+.option:hover{
+    background-color:rgb(226, 214, 214);
+    cursor: pointer;
+}
+
+
+.example::-webkit-scrollbar{
+display: none;
+
+}
+
+
+::-webkit-input-placeholder{
+    text-align: center;
+}
+
+ul{
+    width: 100%;
+    margin-top: 0;
+    justify-content: center;
+    height: 8rem;
+    border-radius: 1%;
+    overflow-y: auto;
+    background-color: rgb(197, 195, 192);
+    
+}
+
+.list input{
+    width: 100%;
+    padding: 0.5rem;
+    outline: 0;;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+   
+}
+.list input:focus{
+    border: 0.2rem solid black;
+}
+
+
+.option{
+height: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+
+}
+
+.hidelist{
+    transition: height 1s linear;
+    max-height: 5rem;
+}
+
+.increase{
+    position: absolute;
+    width: 100%;
+    left:5%;
+    top: 40%;
+    transition: width 2s linear
+}
+
+.input{
+    /* width: 100%; */
+    position:absolute;
+    left: 51%;
+    top: 39%;
+
+}
+
+button{
+    
+    position: absolute;
+    top: 16rem;
+    padding:0.5rem;
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    /* margin-top: 10rem; */
+}
+
+movebutton{
+    position: absolute;
+    top:15rem;
+}   
+
+
+/* loading spinner css */
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: rgb(124, 239, 124);;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
+  
+  
+  .con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 30%;
+    /* background-color: gray; */
+    /* height: 100vh; */
+    z-index: 2;
+  }

@@ -1,0 +1,25 @@
+<div class="container">
+<h1  *ngIf="message !== ''">{{message}}</h1>
+    <div class="box" *ngFor="let f of friends ; let i =index">
+        
+           <div class="text">
+               Connection request from <span>{{f.loggedInUserName}}</span>
+           </div>
+        
+       <div>
+        <a (click)="confirmRequest(i)">
+            <i class="fa-solid fa-square-check fa-fade" style="color: #09dc2c;"></i>
+           </a>
+           <a (click)="rejectRequest(i)">
+            <i class="fa-regular fa-rectangle-xmark fa-shake" style="color: #ed071e;"></i>
+           </a>
+       </div>
+       
+    </div>
+
+    <div>
+
+    </div>
+
+
+</div>

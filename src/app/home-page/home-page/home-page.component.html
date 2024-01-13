@@ -1,0 +1,73 @@
+ <div class="home-container">
+ <div class="carasel">
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../../assets/img1.jfif" class="image" alt="Random first slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../../assets/img2.png" class="image" alt="Random second slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../../assets/img3.jpg" class="image" alt="Random third slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+ 
+  <div class="profile-section">
+    <div class="profile">
+      <div class="welcome">
+        <h1 style="margin-bottom: 7%;">Hi {{ name }}</h1>
+        <h2>Welcome!</h2>
+      </div>
+    
+      <br><br>
+      
+      <div class="profile-info">
+        <h2 style="margin-bottom: 5%;">Your Profile</h2>
+        <p style="margin-bottom: 5%;"><b>Name:</b> {{ name }}</p>
+        <p> <b>Email:</b> {{ email }}</p>
+        <button class="btn btn-primary" [routerLink]="['update']" style="width: 100%;">Edit</button>
+      </div>
+      <div class="returns">
+        <h3 style="margin: 0;">Your Returns: {{ return }}%</h3>
+      </div>
+      <div class="portfolio">
+        <h2 style="margin: 0;">See your Portfolio...</h2>
+        <button class="btn btn-primary" [routerLink]="['portfolio']">Portfolio</button>
+      </div>
+     
+    </div>
+    <div class="social">
+      <h1>Be bit Socialize... </h1>
+      <h2 class="my-anchor">Go and find some friends... <a (click)="seeFriends()"  >Find Friends</a></h2>
+      <h2>Go to your Friend list... <a  [routerLink]="['Friends']">Friend List</a></h2>
+      <h2>Do you have any connnection request... <a [routerLink]="['tempFriendList']">Request List</a></h2>
+    </div>
+  </div>
+
+  <div class="leaderbord">
+    <h1>Wanna see who is leading the game... <a [routerLink]="['LeaderBoard']">Go to Leaderboard</a></h1>
+  </div>
+
+ </div>
+
+ 
+ 

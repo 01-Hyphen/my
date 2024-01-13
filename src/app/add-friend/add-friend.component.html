@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="box" *ngFor="let f of users ; let i =index" >
+  <div class="box-header" >
+
+    <h5>
+     {{f.loggedInUserName}}
+    </h5>
+
+   
+  </div >
+  <div class="profile-image" >
+    <!-- <img src="src\assets\profilePhoto.png" alt=""> -->
+
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-primary" (click)="sendReq(i)">Send Request</button>
+
+  </div>
+</div>
+
+ 

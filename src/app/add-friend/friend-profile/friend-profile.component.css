@@ -1,0 +1,54 @@
+
+
+
+  .container {
+    margin-top: 5%;
+     width: 800px;
+    /* margin: 0 auto; */
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 15px 12px 0 rgba(0, 0, 0, 0.5), 0 20px 20px 0 rgba(0,0,0,0.5) ;
+    border-radius: 8px;
+    /* margin-top: 10%; */
+  }
+  h2 {
+    
+    font-size: 28px;
+    margin-bottom: 20px;
+    color:white;
+    
+  }
+  h5{
+    color: white;
+  }
+  .returns{
+    color: green;
+    font-weight: bolder;
+
+  }
+  
+  table {
+   
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: black;
+    color: white;
+  }
+  tr:hover {
+    background-color: gray;
+  }
+  tr{
+    color: white;
+  }
+
+
+
+

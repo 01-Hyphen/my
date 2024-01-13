@@ -1,0 +1,38 @@
+
+<div class="out-container">
+  <div class="container">
+    <div>
+        <h2>Your Portfolio</h2>
+        
+        <h5>Total Returns : <span class="returns">{{return}} %</span></h5>
+     
+        <table>
+          <thead>
+
+            <tr>
+              <th>Symbol</th>
+              <th>Buy Price</th>
+              <th>Current Price</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr class="TR" *ngFor="let stock of portfolio; let i=index">
+              <td>{{ stock.symbol }}</td>
+              <td>{{ stock.buyPrice }}</td>
+              <td>{{ stock.currentPrice }}</td>
+              <td>{{ stock.description }}</td>
+              <button class="btn btn-danger" (click)="Remove(i)">Remove</button>
+            </tr>
+           
+          </tbody>
+       
+          <button type="button" class="btn btn-primary" [routerLink]="['../','add']">Add Stock</button>
+
+
+        </table>
+      </div>
+  </div>
+</div>

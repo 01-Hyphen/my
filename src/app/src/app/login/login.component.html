@@ -1,0 +1,36 @@
+
+
+<section class="vh-100 ">
+<div class="login-page">
+    <div class="form">
+      <div class="login">
+        <div class="login-header">
+          <h3>LOGIN</h3>
+          <p>Please enter your credentials to login.</p>
+        </div>
+      </div>
+      <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+        <input type="text" placeholder="username" formControlName="email"/>
+        <input type="password" formControlName="password" placeholder="password"/>
+        <button type="submit">login</button>
+        <p class="message">Not registered? <a routerLink="/signup">Create an account</a></p>
+      </form>
+      <div *ngIf="msg && !errorMsg" style="color: green;">
+        {{msg}}
+      </div>
+      <div *ngIf="errorMsg && !msg" style="color: red;">
+        {{ errorMsg }}
+      </div>
+    </div>
+  </div>
+  
+<!-- Loading spinner -->
+<div *ngIf="showSpinnner" class="con">
+  <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+</div>
+
+
+</section>
+<!-- <app-update  [userId]="userId"></app-update> -->
+
+

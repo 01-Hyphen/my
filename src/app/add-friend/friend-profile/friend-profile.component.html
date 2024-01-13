@@ -1,0 +1,33 @@
+
+  <div class="container">
+    <div>
+        <h2>Friends Portfolio</h2>
+        
+        <h5>Total Returns : <span class="returns">{{return}}</span></h5>
+     
+        <table>
+          <thead>
+
+            <tr>
+              <th>Symbol</th>
+              <th>Buy Price</th>
+              <th>Current Price</th>
+              <th>Description</th>
+         
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr *ngFor="let stock of portfolio">
+              <td>{{ stock.symbol }}</td>
+              <td>{{ stock.buyPrice }}</td>
+              <td>{{ stock.currentPrice }}</td>
+              <td>{{ stock.description }}</td>
+              
+            </tr>
+           
+          </tbody>
+
+        </table>
+      </div>
+  </div>
